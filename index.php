@@ -1,35 +1,3 @@
-<?php
-//print_r($_POST);
-if($_POST){
-    // the message
-    $msg = "First line of text\nSecond line of text";
-
-// use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($msg,70);
-
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-// Additional headers
-//$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-$headers .= 'From: Birthday Reminder <copidi5214@biowey.com>' . "\r\n";
-$headers .= 'Cc: copidi5214@biowey.com' . "\r\n";
-$headers .= 'Bcc: copidi5214@biowey.com' . "\r\n";
-
-// send email
-$success = mail("copidi5214@biowey.com","My subject",$msg);
-// if($success){
-//     echo("success");
-// } else {
-//     echo("failure");
-// }
-
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -63,7 +31,7 @@ $success = mail("copidi5214@biowey.com","My subject",$msg);
                 <a href="#experience">Erfahrung</a>
             </li>
             <li>
-                <a href="#education">Education</a>
+                <a href="#education">Bildung</a>
             </li>
             <li>
                 <a href="#projects">Praktikas</a>
@@ -82,7 +50,7 @@ $success = mail("copidi5214@biowey.com","My subject",$msg);
         <div id="lead-content">
             <h1>Kiran Mayi Gangavaram</h1>
             <h2>Web Developer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <a href="./documents/KiranMayi_Github.pdf" download="KiranMayi_Github.pdf" class="btn-rounded-white">Download Resume</a>
         </div>
         <!-- End #lead-content -->
 
@@ -290,7 +258,7 @@ $success = mail("copidi5214@biowey.com","My subject",$msg);
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
-                <form action="<?php echo $_SERVER['SCRIPT_NAME'] ?>" method="POST" enctype="multipart/form-data">
+                <form action="" method="" enctype="multipart/form-data">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Your email" required>
                 <textarea name="message" placeholder="Your message" required></textarea>
